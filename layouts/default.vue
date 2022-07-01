@@ -1,0 +1,22 @@
+<template>
+  <div class="h-screen w-full flex flex-col gap-2">
+      <nav
+        class="w-full h-12 bg-blue-500 flex flex-row items-center justify-center"
+      >
+        <h1 class="text-3xl text-white font-bold">BlogApp</h1>
+      </nav>
+      <Nuxt/>
+      <footer class="w-full h-max p-2 bg-gray-200 flex flex-col justify-center items-center text-sm font-semibold">
+          <span>BlogApp © 2022</span>
+          <span>Todos os direitos reservados</span>
+          <span>Desenvolvido com 💙 por Luis Davi</span>
+      </footer>
+  </div>
+
+</template>
+
+<script>
+export default {};
+</script>
+
+<style></style>
