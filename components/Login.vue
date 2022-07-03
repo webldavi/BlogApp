@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-max flex flex-col gap-4 p-2 bg-white transition-all rounded-md shadow"
+    class="w-full sm:flex-1 h-max flex flex-col gap-4 p-2 bg-white transition-all rounded-md shadow"
   >
     <div v-if="registed == false">
       <label for="name" class="text-gray-800">Nome Completo:</label>
@@ -63,7 +63,8 @@ export default {
   data() {
     return {
       registed: true,
-      buttonText: 'Entrar'
+      buttonText: 'Entrar',
+      register: false
     };
   },
   methods: {
@@ -71,8 +72,10 @@ export default {
       this.registed = this.$refs.checkbox.checked;
       if(this.registed === false){
           this.buttonText = 'Registrar'
+          this.register = true
       }else{
           this.buttonText = 'Entrar'
+          this.register = false
       }
 
     },
