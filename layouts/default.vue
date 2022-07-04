@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen w-full flex flex-col gap-2 justify-between items-center">
+  <div class="min-h-screen w-full flex flex-col justify-between items-center">
       <nav
         class="w-full h-12 bg-blue-500 flex flex-row items-center justify-center"
       >
@@ -7,6 +7,7 @@
       </nav>
       
       <Nuxt/>
+
       
       <footer class="w-full h-max p-2  bg-gray-200 flex flex-col sm:flex-row sm:gap-4 justify-center items-center text-sm font-normal">
           <div class="flex flex-col items-center justify-center">

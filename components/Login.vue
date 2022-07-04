@@ -22,7 +22,7 @@
         class="w-full h-12 transition-all px-2 border-2 border-blue-400 outline-none rounded focus:border-blue-700"
       />
     </div>
-     <span>Deseja se registrar? <a href="/" class="text-blue-500">Clique aqui</a></span>
+     <span>Deseja se registrar? <a href="/register" class="text-blue-500">Clique aqui</a></span>
     <Button text="Entrar" width="w-full"/>
   </div>
 </template>
