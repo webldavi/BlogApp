@@ -29,15 +29,26 @@ export default {
       theme:{
           extend:{
             width:{
-              '128': '640px'
+              '128': '640px',
+              '132': '720px',
+              '138': '840px',
+              '142': '940px',
+            },
+            height:{
+              '128': '380px'
             }
           }
       }
     }
   },
+  
+  loading: '~/components/Loading.vue',
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  router: {
+    middleware: 'auth'
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -46,8 +57,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: ['@nuxtjs/axios'],
   server:{
       host: '0'
   },

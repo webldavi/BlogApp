@@ -1,13 +1,10 @@
 <template>
-	<div class="w-full h-max flex flex-col">
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6qetXQyPTO9q3uPfbe30EuJ9kc3vMco20ZQ&usqp=CAU" class="w-full h-64 rounded-md">
-		<div class="px-4">
-			<div class="w-full h-28 flex flex-row gap-2 p-2 bg-white rounded-md -mt-8 items-center shadow">
-				<img src="https://randomuser.me/api/portraits/men/27.jpg" height="96px" width="96px" class="rounded-md">
-				<div class="h-full flex flex-col items-start justify-between gap-2 truncate">
-					<span class="text-3xl text-gray-700 truncate">Luis Davi</span>
-					<Button text="Seguir"/>
-				</div>
+	<div class="w-full md:w-132 lg:w-142 h-max flex flex-col gap-8 items-center">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6qetXQyPTO9q3uPfbe30EuJ9kc3vMco20ZQ&usqp=CAU" class="w-full h-64 lg:h-128 rounded-md">
+		<div class="w-full flex items-center justify-center text-justify">
+			<div class="w-full md:w-128 lg:w-138 h-28 flex flex-col gap-2 items-center">
+				<span class="text-3xl text-gray-800">{{post.title}}</span>
+				<span class="text-xl text-gray-600">{{post.author.name}} - {{post.date}}</span>
 			</div>
 		</div>
 		
@@ -15,6 +12,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
 
   name: 'Head',
@@ -23,6 +21,11 @@ export default {
     return {
 
     }
+  },
+  computed:{
+  	...mapGetters({
+  		post: 'post/getCurrentPostInFocus'
+  	})
   }
 }
 </script>

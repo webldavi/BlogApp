@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full h-max p-2 flex flex-col gap-8">
+	<div class="w-full h-max p-2 flex flex-col items-center gap-8">
 		<Head/>
 		<ContentPost/>
 	</div>
@@ -9,7 +9,7 @@
 export default {
 
   name: 'postId',
-
+  middleware: 'checkPost',
   data () {
     return {
 

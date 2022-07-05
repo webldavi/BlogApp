@@ -7,9 +7,9 @@
         ref="cardImage"
       ></div>
       <div class="truncate w-full">
-        <span class="text-xl font-bold">{{ data.title }}</span>
+        <span class="text-xl text-gray-800 ">{{ data.title }}</span>
       </div>
-      <div class="flex-1 w-full break-words text-gray-500" id="card-text">
+      <div class="flex-1 w-full break-words text-gray-700" id="card-text">
         {{ data.text }}
       </div>
     </div>
@@ -19,18 +19,24 @@
       </Tag>
     </div>
     <div class="w-full flex flex-row items-center justify-between">
-      <span class="text-gray-600">Por: {{data.author}} - {{data.date}}</span>
-      <a v-bind:href="`/feed/post/${data.id}`" class="text-blue-500">[Saiba mais]</a>
+      <span class="text-gray-600">Por: {{data.author.name}} - {{data.date}}</span>
+
+      <button @click="updatePostInFocus(data)" class=" text-xl text-blue-500">[Saiba mais]</button>
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: "Card",
-
   data() {
     return {};
+  },
+  methods:{
+    ...mapActions({
+      updatePostInFocus: 'post/updatePostInFocus'
+    })
   },
   props: {
     data: {

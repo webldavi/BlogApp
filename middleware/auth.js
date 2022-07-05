@@ -1,3 +1,3 @@
-export default (context)=>{
-    console.log('auth middleware')
+export default function(){
+	
 }
